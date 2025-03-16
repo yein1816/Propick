@@ -1,0 +1,51 @@
+<header class="header_wrap">
+  <div class="menu_icon">
+    <div></div>
+  </div>
+  <div class="logo"><a href="/Propick/main.html">propick</a></div>
+  <div class="user_icon">
+    <img src="/Propick/images/user.png" alt="" />
+  </div>
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="#">맞춤 프로틴 추천<span id="hot">HOT</span></a>
+      </li>
+      <li><a href="/Propick/product.html">전체 상품 보기</a></li>
+      <li><a href="#">마이페이지</a></li>
+      <li><a href="/Propick/brandIntro.html">브랜드 스토리</a></li>
+      <li class="submenu">
+        <a href="#">소식</a>
+        <ul class="submenu_list">
+          <li><a href="/Propick/collabo.html">협업 브랜드</a></li>
+          <li><a href="#">진행 이벤트</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#">게시판</a>
+        <ul class="submenu_list">
+          <li><a href="#">공지사항게시판</a></li>
+          <li><a href="#">F&A 게시판</a></li>
+          <li><a href="#">Q&A 게시판</a></li>
+          <li><a href="#">자유게시판</a></li>
+        </ul>
+      </li>
+      <li><a href="#">회원가입</a></li>
+    </ul>
+  </div>
+  <script src="/Propick/js/header.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const submenuItems = document.querySelectorAll(".submenu"); // 소식, 게시판 항목
+
+      submenuItems.forEach(function (item) {
+        const subMenu = item.querySelector(".submenu_list"); // 해당 서브메뉴 (submenu_list 클래스)
+
+        // 클릭 시 서브메뉴 토글 (링크가 아닌 전체 submenu 요소에 클릭 이벤트 적용)
+        item.addEventListener("click", function () {
+          subMenu.classList.toggle("active"); // 서브메뉴 보이게/숨기기
+        });
+      });
+    });
+  </script>
+</header>
